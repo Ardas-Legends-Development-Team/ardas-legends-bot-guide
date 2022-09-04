@@ -435,6 +435,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
@@ -515,7 +516,7 @@ Players can injure their character for various reasons, <strong>when injured</st
 <li>
 <p><code>/heal-start character</code><br>
 Starts the healing of a character if it currently resides in a region with a friendly Claimbuild that<br>
-has a <strong>House of Healing</strong>. Healing a character takes <strong>2 days</strong>. More information about healing in the <a href="../../guide/roleplay-characters/roleplay-characters.html#_heal_character">starter guide</a>.</p>
+has a <strong>House of Healing</strong>. Healing a character takes <strong>2 days</strong>. More information about healing in the <a href="./../../guide/roleplay-characters/roleplay-characters.html#_heal_character">starter guide</a>.</p>
 </li>
 <li>
 <p><code>/heal-stop characcter</code><br>
@@ -526,15 +527,210 @@ Stops the healing process of a character, may stay injured and canot bind to arm
 </div>
 <div class="sect2">
 <h3 id="_armies">Armies</h3>
-
+<div class="ulist">
+<ul>
+<li>
+<p><code>/create army [army-name] [claimbuild-name] [units]</code><br>
+Raises a new army from an existing claimbuild. Every military claimbuild [Castles, Strongholds and Towns] can have one active army, except capitals, which can have two.<br></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+The unit input takes a <strong>very specific</strong> format. If the syntax is not correct, the bot will not know what to do with it.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>/disband army-or-company [name]</code><br>
+Disbands an army or company. Can only be done by faction leaders or lords who have the relevant permission.</p>
+</li>
+<li>
+<p><code>/bind army-or-company [army-or-company-name] [target-player]</code><br></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Binds an army to an existing Player / Character. The army has to be of the same faction as the player or one of its allies.<br>
+Note that the army must be located in the same region as the player. Faction leaders/Lords can also bind other players of the same faction.<br>
+<strong>Once a player is bound </strong>to an army or company, that player <strong>can move</strong> by himself!<br></p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Faction Leaders and lords can also bind players of <strong>allies</strong> and <strong>Wanderers</strong>.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <strong>target-player</strong> input <strong>needs</strong> to be a <strong>ping</strong> (@Mirak#5828) so that the Bot knows which player to bind!
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>/unbind army-or-company [army-or-company-name] [target-player]</code><br>
+Unbinds a player from an army. Leaders/Lords can unbind other players of the same faction, normal players only themselves.<br></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <strong>target-player</strong> input <strong>needs</strong> to be a <strong>ping</strong> (@Mirak#5828) so that the Bot knows which player to unbind!
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>/move army-or-company [army-or-company-name] [destination-region]</code><br>
+Creates a movement for an army or company. The shortest path to the destination is calculated by the application. Armies/Companies that were created less than 24 hours ago are unable to move.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The payment will automatically be taken from the <strong>army&#8217;s faction</strong> food stockpile
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>/cancel-move army [army-name]</code><br>
+Cancels an ongoing army/company movement. The army/company stays at the current location.</p>
+</li>
+<li>
+<p><code>/station army-or-company [army-or-company-name] [claimbuild-name]</code><br>
+Stations an army/company at a claimbuild. Armies/companies can only be stationed at allied claimbuilds. Stationed armies are unable to move.</p>
+</li>
+<li>
+<p><code>/unstation army-or-company [army-or-company-name] [claimbuild-name]</code><br>
+Unstations an army/company from a claimbuild. The army/company is able to move again.</p>
+</li>
+<li>
+<p><code>/pick-siege [army-name] [claimbuild-name] [siege-name]</code><br>
+Picks up siege equipment from a claimbuild. Only sieges available at the claimbuild can be picked up.</p>
+</li>
+<li>
+<p><code>/heal-start army [army-name]</code><br>
+Starts healing an army that has lost units in a battle. The army needs to be <strong>stationed</strong> at a claimbuild that has a house of healing.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <strong>Stronghold&#8217;s</strong> House of Healing heals twice as fast, <strong>12 Tokens per day</strong>. Every other build heals <strong>6 tokens</strong>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>/heal-stop army [army-name]</code><br>
+Stops the healing of an army that is currently healing.</p>
+</li>
+<li>
+<p><code>/get upkeep-per-faction [faction-name]</code><br>
+Prints out only the amount of 1 specified faction has to pay for their armies, monthly</p>
+</li>
+<li>
+<p><code>/get unpaid-armies-or-companies</code><br>
+Prints out the <strong>10 oldest</strong> armies or companies that have no registered payment yet.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Staff can delete these armies whenever they feel like it! If you notice that one of your armies is still on this list even though you paid for it, <strong>please contact staff</strong>
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_factions">Factions</h3>
-
+<div class="ulist">
+<ul>
+<li>
+<p><code>/stockpile info</code><br>
+Displays the amount of food stockpiled by the specified faction<br>
+Food is counted in stacks!</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+To add food, go to <strong>/warp payment_area</strong> and throw in pouches of food into your factions hopper!<br>
+The food must fill at least 2.5 Food Bars to be eligible for movements
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_claimbuilds">Claimbuilds</h3>
-
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+All Claimbuild-Commands are <strong>staff-commands</strong>
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -543,30 +739,133 @@ Stops the healing process of a character, may stay injured and canot bind to arm
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_general_2">General</h3>
-
+<div class="ulist">
+<ul>
+<li>
+<p><code>/update ign</code><br>
+changes the ign of a player</p>
+</li>
+<li>
+<p><code>/update faction</code><br>
+changes the faction of a player</p>
+</li>
+<li>
+<p><code>/update discordId</code><br>
+changes discordId of a player</p>
+</li>
+<li>
+<p><code>/delete player</code><br>
+deletes a player from the database,</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_roleplay_characters_2">Roleplay Characters</h3>
-
+<div class="ulist">
+<ul>
+<li>
+<p><code>/create rpchar</code><br>
+creates an rpchar and appends it to the corresponding player</p>
+</li>
+<li>
+<p><code>/update rpchar-name</code><br>
+changes the roleplay character&#8217;s name</p>
+</li>
+<li>
+<p><code>/update rpchar-title</code><br>
+changes the title of the rpchar</p>
+</li>
+<li>
+<p><code>/update rpchar-pvp</code><br>
+changes the pvp boolean of the rpchar</p>
+</li>
+<li>
+<p><code>/update rpchar-gear</code> <br>
+changes the stated gear of the rpchar</p>
+</li>
+<li>
+<p><code>/delete character</code><br>
+deletes a character and unbinds it from any armies</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_armies_2">Armies</h3>
-
+<div class="ulist">
+<ul>
+<li>
+<p><code>/delete army-or-company</code><br>
+Force-deletes an army or company without checks for faction leader permissions, etc.</p>
+</li>
+<li>
+<p><code>/update paid</code><br>
+Updates if an army is paid for or not.</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_factions_2">Factions</h3>
-
+<div class="ulist">
+<ul>
+<li>
+<p><code>/delete army-or-company</code><br>
+Force-deletes an army or company without checks for faction leader permissions, etc.</p>
+</li>
+<li>
+<p><code>/update paid</code><br>
+Updates if an army is paid for or not.</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_claimbuilds_2">Claimbuilds</h3>
-
+<div class="ulist">
+<ul>
+<li>
+<p><code>/create claimbuild</code><br>
+creates a claimbuild and adds it to the database, may claim a region for a faction</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Please refer to the <a href="../../guide/starters-guide.html">starter guide</a> regarding this command as it has several pitfalls which can break it!
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>/update claimbuild-faction</code><br>
+updates the controlling faction of a claimbuild &#8594; won&#8217;t be used until 1.1 <strong>War Update</strong></p>
+</li>
+<li>
+<p><code>/update claimbuild</code><br>
+updates a claimbuild, happens when players re-apply a claimbuild so that they can upgrade their production sites</p>
+</li>
+<li>
+<p><code>/delete claimbuild</code><br>
+deletes the claimbuild and all of its created Armies + trading companies from the database</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-09-04 18:05:13 +0200
+Last updated 2022-09-04 20:54:41 +0200
 </div>
 </div>
 </body>
