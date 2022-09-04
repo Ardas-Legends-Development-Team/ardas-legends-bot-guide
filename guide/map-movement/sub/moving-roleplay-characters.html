@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.17">
-<title>Map Movement</title>
+<title>Moving Roleplay Characters</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -440,143 +440,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="header">
 </div>
 <div id="content">
-<div class="sect1">
-<h2 id="_map_movement">Map Movement</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This chapter will tell you everything about moving around on the map.</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Important!</div>
-<div class="paragraph">
-<p>This chapter will assume you are moving an army. The differences between army and character movements are discussed in the
-sub-chapter <a href="#_moving_roleplay_characters">Moving Roleplay Characters</a>.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_regions_and_terrain">Regions and Terrain</h3>
-<div class="paragraph">
-<p>The map is split into separate <strong>regions</strong>.When moving around the map, you always move from one region to another.
-The duration of the movement is based on how many regions you move through and what the terrain of those regions is like.</p>
-</div>
-<div class="paragraph">
-<p>There are exactly 9 region terrain types.Next to them is the amount of days it takes to move <strong>into</strong> a region of this type.</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Sea (1 day)</p>
-</li>
-<li>
-<p>Land (1 day)</p>
-</li>
-<li>
-<p>Hill (2 days)</p>
-</li>
-<li>
-<p>Ice (2 days)</p>
-</li>
-<li>
-<p>Desert (3 days)</p>
-</li>
-<li>
-<p>Forest (3 days)</p>
-</li>
-<li>
-<p>Swamp (4 days)</p>
-</li>
-<li>
-<p>Jungle (5 days)</p>
-</li>
-<li>
-<p>Mountain (6 days)</p>
-</li>
-</ol>
-</div>
-<div class="exampleblock">
-<div class="title">Example 1. Movement duration</div>
-<div class="content">
-<div class="paragraph">
-<p>As stated above, the duration of a movement is determined by the terrain type of <strong>the region you move into</strong>.</p>
-</div>
-<div class="paragraph">
-<p>Let&#8217;s assume we move from region 209, which has regular 'Land' terrain, into region 237 of type 'Mountain'</p>
-</div>
-<div class="paragraph">
-<p>207 (Land) &#8594; 237 (Mountain)</p>
-</div>
-<div class="paragraph">
-<p>This movement will take 6 days to complete, since mountain regions have a duration cost of 6 days.</p>
-</div>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-When moving through multiple regions, the duration cost of all the regions you move through will be added together.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Important</div>
-</td>
-<td class="content">
-<strong>You cannot move armies through regions that are claimed by other factions.</strong>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_pathfinding">Pathfinding</h3>
-<div class="paragraph">
-<p>When you create a movement, the application will automatically calculate the fastest way to your destination.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Tip</div>
-</td>
-<td class="content">
-If you want to go a specific path which is not the fastest path to your destination, just split up your movement
-into multiple movements.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Important</div>
-</td>
-<td class="content">
-IF YOU NOTICE A BUG OR A MOVEMENT PATH DOES NOT GET CALCULATED CORRECTLY, PLEASE CONTACT THE DEVS!
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_updating_the_current_region">Updating the current region</h3>
-<div class="paragraph">
-<p>Every 15 minutes the bot will automatically go through all active movements and check if they have progressed.</p>
-</div>
-<div class="paragraph">
-<p>That means that the location of your army/character will be updated dynamically.</p>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_moving_roleplay_characters">Moving Roleplay Characters</h3>
 <div class="paragraph">
@@ -596,24 +459,10 @@ IF YOU NOTICE A BUG OR A MOVEMENT PATH DOES NOT GET CALCULATED CORRECTLY, PLEASE
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_the_map">The Map</h3>
-<div class="paragraph">
-<p>The map can be found at the
-<a href="https://drive.google.com/file/d/1MV8Amm2fRJ_XuLeZGzriDbgmxN4brFJE/view?usp=sharing">Google Drive</a>.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="http://drive.google.com/uc?export=view&id=1MV8Amm2fRJ_XuLeZGzriDbgmxN4brFJE" alt="uc?export=view&amp;id=1MV8Amm2fRJ XuLeZGzriDbgmxN4brFJE">
-</div>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-09-04 19:55:23 +0200
+Last updated 2022-09-04 19:58:37 +0200
 </div>
 </div>
 </body>
