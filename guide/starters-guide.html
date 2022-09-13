@@ -436,6 +436,95 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+/*! Stylesheet for CodeRay to loosely match GitHub themes | MIT License */
+pre.CodeRay{background:#f7f7f8}
+.CodeRay .line-numbers{border-right:1px solid;opacity:.35;padding:0 .5em 0 0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+.CodeRay span.line-numbers{display:inline-block;margin-right:.75em}
+.CodeRay .line-numbers strong{color:#000}
+table.CodeRay{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.CodeRay td{vertical-align:top;line-height:inherit}
+table.CodeRay td.line-numbers{text-align:right}
+table.CodeRay td.code{padding:0 0 0 .75em}
+.CodeRay .debug{color:#fff!important;background:navy!important}
+.CodeRay .annotation{color:#007}
+.CodeRay .attribute-name{color:navy}
+.CodeRay .attribute-value{color:#700}
+.CodeRay .binary{color:#509}
+.CodeRay .comment{color:#998;font-style:italic}
+.CodeRay .char{color:#04d}
+.CodeRay .char .content{color:#04d}
+.CodeRay .char .delimiter{color:#039}
+.CodeRay .class{color:#458;font-weight:bold}
+.CodeRay .complex{color:#a08}
+.CodeRay .constant,.CodeRay .predefined-constant{color:teal}
+.CodeRay .color{color:#099}
+.CodeRay .class-variable{color:#369}
+.CodeRay .decorator{color:#b0b}
+.CodeRay .definition{color:#099}
+.CodeRay .delimiter{color:#000}
+.CodeRay .doc{color:#970}
+.CodeRay .doctype{color:#34b}
+.CodeRay .doc-string{color:#d42}
+.CodeRay .escape{color:#666}
+.CodeRay .entity{color:#800}
+.CodeRay .error{color:#808}
+.CodeRay .exception{color:inherit}
+.CodeRay .filename{color:#099}
+.CodeRay .function{color:#900;font-weight:bold}
+.CodeRay .global-variable{color:teal}
+.CodeRay .hex{color:#058}
+.CodeRay .integer,.CodeRay .float{color:#099}
+.CodeRay .include{color:#555}
+.CodeRay .inline{color:#000}
+.CodeRay .inline .inline{background:#ccc}
+.CodeRay .inline .inline .inline{background:#bbb}
+.CodeRay .inline .inline-delimiter{color:#d14}
+.CodeRay .inline-delimiter{color:#d14}
+.CodeRay .important{color:#555;font-weight:bold}
+.CodeRay .interpreted{color:#b2b}
+.CodeRay .instance-variable{color:teal}
+.CodeRay .label{color:#970}
+.CodeRay .local-variable{color:#963}
+.CodeRay .octal{color:#40e}
+.CodeRay .predefined{color:#369}
+.CodeRay .preprocessor{color:#579}
+.CodeRay .pseudo-class{color:#555}
+.CodeRay .directive{font-weight:bold}
+.CodeRay .type{font-weight:bold}
+.CodeRay .predefined-type{color:inherit}
+.CodeRay .reserved,.CodeRay .keyword{color:#000;font-weight:bold}
+.CodeRay .key{color:#808}
+.CodeRay .key .delimiter{color:#606}
+.CodeRay .key .char{color:#80f}
+.CodeRay .value{color:#088}
+.CodeRay .regexp .delimiter{color:#808}
+.CodeRay .regexp .content{color:#808}
+.CodeRay .regexp .modifier{color:#808}
+.CodeRay .regexp .char{color:#d14}
+.CodeRay .regexp .function{color:#404;font-weight:bold}
+.CodeRay .string{color:#d20}
+.CodeRay .string .string .string{background:#ffd0d0}
+.CodeRay .string .content{color:#d14}
+.CodeRay .string .char{color:#d14}
+.CodeRay .string .delimiter{color:#d14}
+.CodeRay .shell{color:#d14}
+.CodeRay .shell .delimiter{color:#d14}
+.CodeRay .symbol{color:#990073}
+.CodeRay .symbol .content{color:#a60}
+.CodeRay .symbol .delimiter{color:#630}
+.CodeRay .tag{color:teal}
+.CodeRay .tag-special{color:#d70}
+.CodeRay .variable{color:#036}
+.CodeRay .insert{background:#afa}
+.CodeRay .delete{background:#faa}
+.CodeRay .change{color:#aaf;background:#007}
+.CodeRay .head{color:#f8f;background:#505}
+.CodeRay .insert .insert{color:#080}
+.CodeRay .delete .delete{color:#800}
+.CodeRay .change .change{color:#66f}
+.CodeRay .head .head{color:#f4f}
+</style>
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
@@ -443,27 +532,27 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_before_you_continue">Before you continue</a></li>
-<li><a href="#_getting_started">Getting started</a>
+<li><a href="#before-you-continue">Before you continue</a></li>
+<li><a href="#getting-started">Getting started</a>
 <ul class="sectlevel2">
-<li><a href="#_register">Register</a></li>
-<li><a href="#_creating_a_roleplay_character">Creating a Roleplay Character</a></li>
+<li><a href="#register">Register</a></li>
+<li><a href="#creating-a-roleplay-character">Creating a Roleplay Character</a></li>
 </ul>
 </li>
-<li><a href="#_roleplay_characters">Roleplay Characters</a>
+<li><a href="#roleplay-characters">Roleplay Characters</a>
 <ul class="sectlevel2">
-<li><a href="#_moving_characters">Moving Characters</a></li>
-<li><a href="#_injure_character">Injure Character</a></li>
-<li><a href="#_heal_character">Heal Character</a></li>
+<li><a href="#moving-characters">Moving Characters</a></li>
+<li><a href="#injure-character">Injure Character</a></li>
+<li><a href="#heal-character">Heal Character</a></li>
 </ul>
 </li>
 <li><a href="#_map_movement">Map Movement</a>
 <ul class="sectlevel2">
-<li><a href="#_regions_and_terrain">Regions and Terrain</a></li>
-<li><a href="#_pathfinding">Pathfinding</a></li>
-<li><a href="#_updating_the_current_region">Updating the current region</a></li>
+<li><a href="#regions-and-terrain">Regions and Terrain</a></li>
+<li><a href="#pathfinding">Pathfinding</a></li>
+<li><a href="#updating-the-current-region">Updating the current region</a></li>
 <li><a href="#_moving_roleplay_characters">Moving Roleplay Characters</a></li>
-<li><a href="#_the_map">The Map</a></li>
+<li><a href="#the-map">The Map</a></li>
 </ul>
 </li>
 </ul>
@@ -479,7 +568,7 @@ This is a guide with the aim to clarify the possibilities and commands of the bo
 </div>
 </div>
 <div class="sect1">
-<h2 id="_before_you_continue">Before you continue</h2>
+<h2 id="before-you-continue"><a class="anchor" href="#before-you-continue"></a>Before you continue</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>At first, we need to clarify some things about this guide.
@@ -490,7 +579,7 @@ Most of the time the commands will be displayed in their actual syntax, for exam
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>/register [ign] [faction-name]</code></pre>
+<pre class="CodeRay highlight"><code>/register [ign] [faction-name]</code></pre>
 </div>
 </div>
 </div>
@@ -508,10 +597,10 @@ or encounter an unexpected error message/disfunction of the bot, <strong><strong
 </div>
 </div>
 <div class="sect1">
-<h2 id="_getting_started">Getting started</h2>
+<h2 id="getting-started"><a class="anchor" href="#getting-started"></a>Getting started</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_register">Register</h3>
+<h3 id="register"><a class="anchor" href="#register"></a>Register</h3>
 <div class="paragraph">
 <p>Before being able to interact with the bot, you will have to register.After you&#8217;ve done that the bot will have you registered
 in its system and will recognize you as a player.
@@ -519,7 +608,7 @@ In order to register, simply use the <code>/register</code> command.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>    /register [ign] [faction-name]</code></pre>
+<pre class="CodeRay highlight"><code>    /register [ign] [faction-name]</code></pre>
 </div>
 </div>
 <div class="exampleblock">
@@ -527,7 +616,7 @@ In order to register, simply use the <code>/register</code> command.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>    /register [Luktronic] [Gondor]</code></pre>
+<pre class="CodeRay highlight"><code>    /register [Luktronic] [Gondor]</code></pre>
 </div>
 </div>
 </div>
@@ -549,7 +638,7 @@ TYPE IN YOUR IGN CORRECTLY - IF YOU MAKE A TYPO IT CAN CAUSE MANY PROBLEMS
 </div>
 </div>
 <div class="sect2">
-<h3 id="_creating_a_roleplay_character">Creating a Roleplay Character</h3>
+<h3 id="creating-a-roleplay-character"><a class="anchor" href="#creating-a-roleplay-character"></a>Creating a Roleplay Character</h3>
 <div class="paragraph">
 <p>Before you can actually engage in roleplay, you will need to create a character.</p>
 </div>
@@ -559,7 +648,7 @@ of the staff members will create a roleplay character for you with the command:<
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>    /create rpchar [name] [title] [gear] [pvp]</code></pre>
+<pre class="CodeRay highlight"><code>    /create rpchar [name] [title] [gear] [pvp]</code></pre>
 </div>
 </div>
 <div class="exampleblock">
@@ -567,7 +656,7 @@ of the staff members will create a roleplay character for you with the command:<
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>    /create rpchar Belegorn [title] [gear] [pvp]</code></pre>
+<pre class="CodeRay highlight"><code>    /create rpchar Belegorn [title] [gear] [pvp]</code></pre>
 </div>
 </div>
 </div>
@@ -603,7 +692,7 @@ Your roleplay character will be created in the home region of your faction
 </div>
 </div>
 <div class="sect1">
-<h2 id="_roleplay_characters">Roleplay Characters</h2>
+<h2 id="roleplay-characters"><a class="anchor" href="#roleplay-characters"></a>Roleplay Characters</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Roleplay characters are essential for the roleplay system of the application. Hardly anything functions without them.</p>
@@ -613,13 +702,13 @@ Your roleplay character will be created in the home region of your faction
 them to armies, but those things are talked about in other, more fitting chapters.</p>
 </div>
 <div class="sect2">
-<h3 id="_moving_characters">Moving Characters</h3>
+<h3 id="moving-characters"><a class="anchor" href="#moving-characters"></a>Moving Characters</h3>
 <div class="paragraph">
 <p>You can move your character around the map with the command:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>    /move character [end-region]</code></pre>
+<pre class="CodeRay highlight"><code>    /move character [end-region]</code></pre>
 </div>
 </div>
 <div class="exampleblock">
@@ -627,7 +716,7 @@ them to armies, but those things are talked about in other, more fitting chapter
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>    /move character [123]</code></pre>
+<pre class="CodeRay highlight"><code>    /move character [123]</code></pre>
 </div>
 </div>
 </div>
@@ -644,14 +733,14 @@ your character will arrive at their destination after the required amount of tim
 </td>
 <td class="content">
 Map regions now take longer to move through depending on their terrain. More on that and movements in general in the chapter
-<a href="#_regions_and_terrain">Regions and Terrain</a>.
+<a href="#_regions_and_terrain">[_regions_and_terrain]</a>.
 </td>
 </tr>
 </table>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_injure_character">Injure Character</h3>
+<h3 id="injure-character"><a class="anchor" href="#injure-character"></a>Injure Character</h3>
 <div class="paragraph">
 <p>Roleplay characters can be injured by using the command:</p>
 </div>
@@ -660,7 +749,7 @@ Map regions now take longer to move through depending on their terrain. More on 
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>    /injure character</code></pre>
+<pre class="CodeRay highlight"><code>    /injure character</code></pre>
 </div>
 </div>
 </div>
@@ -698,7 +787,7 @@ If you injure your character, it will automatically get unbound from armies.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_heal_character">Heal Character</h3>
+<h3 id="heal-character"><a class="anchor" href="#heal-character"></a>Heal Character</h3>
 <div class="paragraph">
 <p>In order to heal an injured character, first move into a region that has a Claimbuild owned by your faction. Said Claimbuild needs to have a House of Healing,
 otherwise your character cannot heal there.</p>
@@ -720,7 +809,7 @@ Healing a character takes 2 days. If you stop the healing process, the progress 
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>    /heal-start character</code></pre>
+<pre class="CodeRay highlight"><code>    /heal-start character</code></pre>
 </div>
 </div>
 </div>
@@ -729,7 +818,7 @@ Healing a character takes 2 days. If you stop the healing process, the progress 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_map_movement">Map Movement</h2>
+<h2 id="_map_movement"><a class="anchor" href="#_map_movement"></a>Map Movement</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This chapter will tell you everything about moving around on the map.</p>
@@ -744,7 +833,7 @@ sub-chapter <a href="#_moving_roleplay_characters">Moving Roleplay Characters</a
 </div>
 </div>
 <div class="sect2">
-<h3 id="_regions_and_terrain">Regions and Terrain</h3>
+<h3 id="regions-and-terrain"><a class="anchor" href="#regions-and-terrain"></a>Regions and Terrain</h3>
 <div class="paragraph">
 <p>The map is split into separate <strong>regions</strong>.When moving around the map, you always move from one region to another.
 The duration of the movement is based on how many regions you move through and what the terrain of those regions is like.</p>
@@ -826,7 +915,7 @@ When moving through multiple regions, the duration cost of all the regions you m
 </div>
 </div>
 <div class="sect2">
-<h3 id="_pathfinding">Pathfinding</h3>
+<h3 id="pathfinding"><a class="anchor" href="#pathfinding"></a>Pathfinding</h3>
 <div class="paragraph">
 <p>When you create a movement, the application will automatically calculate the fastest way to your destination.</p>
 </div>
@@ -857,7 +946,7 @@ IF YOU NOTICE A BUG OR A MOVEMENT PATH DOES NOT GET CALCULATED CORRECTLY, PLEASE
 </div>
 </div>
 <div class="sect2">
-<h3 id="_updating_the_current_region">Updating the current region</h3>
+<h3 id="updating-the-current-region"><a class="anchor" href="#updating-the-current-region"></a>Updating the current region</h3>
 <div class="paragraph">
 <p>Every 15 minutes the bot will automatically go through all active movements and check if they have progressed.</p>
 </div>
@@ -866,7 +955,7 @@ IF YOU NOTICE A BUG OR A MOVEMENT PATH DOES NOT GET CALCULATED CORRECTLY, PLEASE
 </div>
 </div>
 <div class="sect2">
-<h3 id="_moving_roleplay_characters">Moving Roleplay Characters</h3>
+<h3 id="_moving_roleplay_characters"><a class="anchor" href="#_moving_roleplay_characters"></a>Moving Roleplay Characters</h3>
 <div class="paragraph">
 <p>While being mostly the same, there are some differences between movements of armies and roleplay characters:</p>
 </div>
@@ -885,7 +974,7 @@ IF YOU NOTICE A BUG OR A MOVEMENT PATH DOES NOT GET CALCULATED CORRECTLY, PLEASE
 </div>
 </div>
 <div class="sect2">
-<h3 id="_the_map">The Map</h3>
+<h3 id="the-map"><a class="anchor" href="#the-map"></a>The Map</h3>
 <div class="paragraph">
 <p>The map can be found at the
 <a href="https://drive.google.com/file/d/1MV8Amm2fRJ_XuLeZGzriDbgmxN4brFJE/view?usp=sharing">Google Drive</a>.</p>
@@ -901,7 +990,7 @@ IF YOU NOTICE A BUG OR A MOVEMENT PATH DOES NOT GET CALCULATED CORRECTLY, PLEASE
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-09-05 14:34:03 +0200
+Last updated 2022-09-06 21:37:25 +0200
 </div>
 </div>
 </body>

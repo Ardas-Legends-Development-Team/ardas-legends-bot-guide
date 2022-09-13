@@ -435,6 +435,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
@@ -442,15 +443,21 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_v1_0_release">v1.0 - Release</a>
+<li><a href="#v1-0-1-fixing-rp-char-movements">v1.0.1 - Fixing RP-Char Movements</a>
 <ul class="sectlevel2">
-<li><a href="#_features">Features</a></li>
-<li><a href="#_new_commands">New Commands</a>
+<li><a href="#bug-fixes">Bug fixes</a></li>
+<li><a href="#user-interface">User Interface</a></li>
+</ul>
+</li>
+<li><a href="#v1-0-release">v1.0 - Release</a>
+<ul class="sectlevel2">
+<li><a href="#features">Features</a></li>
+<li><a href="#new-commands">New Commands</a>
 <ul class="sectlevel3">
-<li><a href="#_players_and_roleplay_characters">Players and Roleplay Characters</a></li>
-<li><a href="#_armies">Armies</a></li>
-<li><a href="#_claimbuilds">Claimbuilds</a></li>
-<li><a href="#_faction">Faction</a></li>
+<li><a href="#players-and-roleplay-characters">Players and Roleplay Characters</a></li>
+<li><a href="#armies">Armies</a></li>
+<li><a href="#claimbuilds">Claimbuilds</a></li>
+<li><a href="#faction">Faction</a></li>
 </ul>
 </li>
 </ul>
@@ -460,10 +467,35 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_v1_0_release">v1.0 - Release</h2>
+<h2 id="v1-0-1-fixing-rp-char-movements"><a class="anchor" href="#v1-0-1-fixing-rp-char-movements"></a>v1.0.1 - Fixing RP-Char Movements</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_features">Features</h3>
+<h3 id="bug-fixes"><a class="anchor" href="#bug-fixes"></a>Bug fixes</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Fixed a bug that did not take the x2 movement speed of Roleplay Character movements into account.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="user-interface"><a class="anchor" href="#user-interface"></a>User Interface</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Changed the bot message when creating a roleplay character to be more gender inclusive.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="v1-0-release"><a class="anchor" href="#v1-0-release"></a>v1.0 - Release</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="features"><a class="anchor" href="#features"></a>Features</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -482,11 +514,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_new_commands">New Commands</h3>
+<h3 id="new-commands"><a class="anchor" href="#new-commands"></a>New Commands</h3>
 <div class="sect3">
-<h4 id="_players_and_roleplay_characters">Players and Roleplay Characters</h4>
+<h4 id="players-and-roleplay-characters"><a class="anchor" href="#players-and-roleplay-characters"></a>Players and Roleplay Characters</h4>
 <div class="sect4">
-<h5 id="_regular_commands">Regular Commands</h5>
+<h5 id="regular-commands"><a class="anchor" href="#regular-commands"></a>Regular Commands</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -517,7 +549,7 @@ stops the movement of a character, the character stays at the current region</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_staff_commands">Staff Commands</h5>
+<h5 id="staff-commands"><a class="anchor" href="#staff-commands"></a>Staff Commands</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -565,9 +597,9 @@ deletes a character and unbinds it from any armies</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_armies">Armies</h4>
+<h4 id="armies"><a class="anchor" href="#armies"></a>Armies</h4>
 <div class="sect4">
-<h5 id="_regular_commands_2">Regular Commands</h5>
+<h5 id="regular-commands-2"><a class="anchor" href="#regular-commands-2"></a>Regular Commands</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -630,7 +662,7 @@ Prints out all the armies or companies that have no registered payment yet.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_staff_commands_2">Staff Commands</h5>
+<h5 id="staff-commands-2"><a class="anchor" href="#staff-commands-2"></a>Staff Commands</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -646,9 +678,9 @@ Updates if an army is paid for or not.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_claimbuilds">Claimbuilds</h4>
+<h4 id="claimbuilds"><a class="anchor" href="#claimbuilds"></a>Claimbuilds</h4>
 <div class="sect4">
-<h5 id="_staff_commands_3">Staff Commands</h5>
+<h5 id="staff-commands-3"><a class="anchor" href="#staff-commands-3"></a>Staff Commands</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -672,9 +704,9 @@ deletes the claimbuild and all of its created Armies + trading companies from th
 </div>
 </div>
 <div class="sect3">
-<h4 id="_faction">Faction</h4>
+<h4 id="faction"><a class="anchor" href="#faction"></a>Faction</h4>
 <div class="sect4">
-<h5 id="_regular_commands_3">Regular Commands</h5>
+<h5 id="regular-commands-3"><a class="anchor" href="#regular-commands-3"></a>Regular Commands</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -685,7 +717,7 @@ Displays the amount of food stockpiled by the specified faction</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_staff_commands_4">Staff Commands</h5>
+<h5 id="staff-commands-4"><a class="anchor" href="#staff-commands-4"></a>Staff Commands</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -710,7 +742,7 @@ Removes stacks of food from the stockpile of a faction.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-09-05 14:34:03 +0200
+Last updated 2022-09-13 20:14:04 +0200
 </div>
 </div>
 </body>
