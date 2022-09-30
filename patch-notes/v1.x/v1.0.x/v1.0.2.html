@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.17">
-<title>Untitled</title>
+<title>v1.0.2 - Javacord</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -437,33 +437,240 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="article">
+<body class="article toc2 toc-left">
 <div id="header">
+<h1>v1.0.2 - Javacord</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#bug-fixes">Bug fixes</a></li>
+<li><a href="#gameplay">Gameplay</a></li>
+<li><a href="#user-interface">User Interface</a></li>
+<li><a href="#commands">Commands</a></li>
+</ul>
+</div>
 </div>
 <div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this patch, the Bot got migrated from the JavaScript Discord library (discordjs) to <strong>Javacord</strong>, which is a Java library for Discord.</p>
+</div>
+<div class="paragraph">
+<p>This means that the Bot will run a lot more stable and errors should occur less often. This update should also decrease the development time of future features, since we save some steps when implementing new features.</p>
+</div>
+<div class="paragraph">
+<p>We also used this update to implement some quality of life, as well as visual improvements to messages sent by the Bot.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="bug-fixes"><a class="anchor" href="#bug-fixes"></a>Bug fixes</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p><code>/update player ign</code><br>
-changes the ign of a player</p>
+<p>The Bot runs more stable and a bit faster now</p>
 </li>
 <li>
-<p><code>/update player faction</code><br>
-changes the faction of a player</p>
-</li>
-<li>
-<p><code>/update player discord-id</code><br>
-changes discordId of a player</p>
-</li>
-<li>
-<p><code>/delete player</code><br>
-deletes a player from the database,</p>
-</li>
-<li>
-<p><code>/update claimmap</code><br>
-Sets the flag which indicates if the region has changed ownership since the last Claimmap update to false. Should be used after all the regions have been painted in the Claimmap. Resets the <strong>claimmap update</strong> sheet in the roleplay data sheet.</p>
+<p>The <code>/update claimmap</code> command has been fixed and is working correctly</p>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="gameplay"><a class="anchor" href="#gameplay"></a>Gameplay</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Unbinding players from armies that are currently moving now requires
+to cancel the movement first.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="user-interface"><a class="anchor" href="#user-interface"></a>User Interface</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Messages of Staff commands now have the color yellow so they stand out more</p>
+</li>
+<li>
+<p>Some commands now show the banner of the faction that got updated by the command. The following commands now show the faction banner:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>/create claimbuild</code></p>
+</li>
+<li>
+<p><code>/delete claimbuild</code></p>
+</li>
+<li>
+<p><code>/delete army-or-company</code></p>
+</li>
+<li>
+<p><code>/update player faction</code></p>
+</li>
+<li>
+<p><code>/register</code></p>
+</li>
+<li>
+<p><code>/create army</code></p>
+</li>
+<li>
+<p><code>/disband army-or-company</code></p>
+</li>
+<li>
+<p><code>/bind army-or-company</code></p>
+</li>
+<li>
+<p><code>/unbind army-or-company</code></p>
+</li>
+<li>
+<p><code>/move army-or-company</code></p>
+</li>
+<li>
+<p><code>/cancel move army-or-company</code></p>
+</li>
+<li>
+<p><code>/station army-or-company</code></p>
+</li>
+<li>
+<p><code>/unstation army-or-company</code></p>
+</li>
+<li>
+<p><code>/stockpile add</code></p>
+</li>
+<li>
+<p><code>/stockpile remove</code></p>
+</li>
+<li>
+<p><code>/pick-siege</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The <code>/create army</code> command now displays from which Claimbuild the army
+was created from</p>
+</li>
+<li>
+<p>The <code>/update claimmap</code> now displays which regions have been reset in the database table</p>
+</li>
+<li>
+<p>Messages from successful commands generally show way more information than before</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="commands"><a class="anchor" href="#commands"></a>Commands</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Changed following command names:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>From <code>/update faction</code> to <code>/update player faction</code></p>
+</li>
+<li>
+<p>From <code>/update ign</code> to <code>/update player ign</code></p>
+</li>
+<li>
+<p>From <code>/update discord-id</code> to <code>/update player discord-id</code></p>
+</li>
+<li>
+<p>From <code>/update rpchar-gear</code> to <code>/update rpchar gear</code></p>
+</li>
+<li>
+<p>From <code>/update rpchar-name</code> to <code>/update rpchar name</code></p>
+</li>
+<li>
+<p>From <code>/update rpchar-pvp</code> to <code>/update rpchar pvp</code></p>
+</li>
+<li>
+<p>From <code>/update rpchar-title</code> to <code>/update rpchar title</code></p>
+</li>
+<li>
+<p>From <code>/move character</code> to <code>/move rpchar</code></p>
+</li>
+<li>
+<p>From <code>/cancel-move character</code> to <code>/cancel move rpchar</code></p>
+</li>
+<li>
+<p>From <code>/cancel-move army</code> to <code>/cancel move army-or-company</code></p>
+</li>
+<li>
+<p>From <code>/injure character</code> to <code>/injure rpchar</code></p>
+</li>
+<li>
+<p>From <code>/heal-start character</code> to <code>/heal rpchar</code></p>
+</li>
+<li>
+<p>From <code>/heal-stop character</code> to <code>/cancel heal rpchar</code></p>
+</li>
+<li>
+<p>From <code>/heal-start army</code> to <code>/heal army</code></p>
+</li>
+<li>
+<p>From <code>/heal-stop army</code> to <code>/cancel heal army</code></p>
+</li>
+<li>
+<p>From <code>/get upkeep</code> to <code>/info faction upkeep</code></p>
+</li>
+<li>
+<p>From <code>/update paid</code> to <code>/update army paid</code></p>
+</li>
+<li>
+<p>From <code>/update reset-region-ownership</code> to <code>/update claimmap</code></p>
+</li>
+<li>
+<p>From <code>/update faction-leader</code> to <code>/update faction leader</code></p>
+</li>
+<li>
+<p>From <code>/update free-tokens</code> to <code>/update army free-tokens</code></p>
+</li>
+<li>
+<p>From <code>/get unpaid-armies-or-companies</code> to <code>/info unpaid-armies-or-companies</code></p>
+</li>
+<li>
+<p>From <code>/stockpile</code> to <code>/info faction stockpile</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The <code>/update player faction</code> command now takes a User Ping as an input instead of the Discord-Id of the user.</p>
+</li>
+<li>
+<p>The <code>/update player ign</code> command now takes a User Ping as an input instead of the Discord-Id of the user.</p>
+</li>
+<li>
+<p>The <code>/update rpchar gear</code> command now takes a User Ping as an input instead of the Discord-Id of the user.</p>
+</li>
+<li>
+<p>The <code>/update rpchar name</code> command now takes a User Ping as an input instead of the Discord-Id of the user.</p>
+</li>
+<li>
+<p>The <code>/update rpchar title</code> command now takes a User Ping as an input instead of the Discord-Id of the user.</p>
+</li>
+<li>
+<p>The <code>/update rpchar pvp</code> command now takes a User Ping as an input instead of the Discord-Id of the user.</p>
+</li>
+<li>
+<p>The <code>/update faction leader</code> command now takes a User Ping as an input instead of the Discord-Id of the user.</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 <div id="footer">

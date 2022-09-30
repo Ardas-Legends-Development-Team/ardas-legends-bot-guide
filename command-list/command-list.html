@@ -500,26 +500,26 @@ Registers you in the system. The bot saves the following information about you:<
 <div class="ulist">
 <ul>
 <li>
-<p><code>/move character [end-region]</code><br>
+<p><code>/move rpchar [destination-region]</code><br>
 moves the roleplay character of the player that executed the command to the desired <strong>region</strong>.<br>
 The Bot takes the <strong>shortest path</strong> possible and displays the required days for the movement.<br>
 It also updates the position of the character automatically.</p>
 </li>
 <li>
-<p><code>/cancel-move character</code><br>
+<p><code>/cancel move rpchar</code><br>
 This cancels the movement of the character. The character stops moving and stays at the current region.</p>
 </li>
 <li>
-<p><code>/injure character</code><br>
+<p><code>/injure rpchar</code><br>
 Players can injure their character for various reasons, <strong>when injured</strong> players must move to a region of their faction (or allies) with a <strong>Claimbuild</strong> that has a <strong>House of Healing</strong>. Injured characters cannot <strong>bind to armies</strong>.</p>
 </li>
 <li>
-<p><code>/heal-start character</code><br>
+<p><code>/heal rpchar</code><br>
 Starts the healing of a character if it currently resides in a region with a friendly Claimbuild that<br>
 has a <strong>House of Healing</strong>. Healing a character takes <strong>2 days</strong>. More information about healing in the <a href="./../../guide/roleplay-characters/roleplay-characters.html#_heal_character">starter guide</a>.</p>
 </li>
 <li>
-<p><code>/heal-stop characcter</code><br>
+<p><code>/cancel heal rpchar</code><br>
 Stops the healing process of a character, may stay injured and canot bind to armies.</p>
 </li>
 </ul>
@@ -630,7 +630,7 @@ The payment will automatically be taken from the <strong>army&#8217;s faction</s
 <div class="ulist">
 <ul>
 <li>
-<p><code>/cancel-move army [army-name]</code><br>
+<p><code>/cancel move army-or-company [army-or-company-name]</code><br>
 Cancels an ongoing army/company movement. The army/company stays at the current location.</p>
 </li>
 <li>
@@ -646,7 +646,7 @@ Unstations an army/company from a claimbuild. The army/company is able to move a
 Picks up siege equipment from a claimbuild. Only sieges available at the claimbuild can be picked up.</p>
 </li>
 <li>
-<p><code>/heal-start army [army-name]</code><br>
+<p><code>/heal army [army-name]</code><br>
 Starts healing an army that has lost units in a battle. The army needs to be <strong>stationed</strong> at a claimbuild that has a house of healing.</p>
 </li>
 </ul>
@@ -666,15 +666,11 @@ The <strong>Stronghold&#8217;s</strong> House of Healing heals twice as fast, <s
 <div class="ulist">
 <ul>
 <li>
-<p><code>/heal-stop army [army-name]</code><br>
+<p><code>/cancel heal army [army-name]</code><br>
 Stops the healing of an army that is currently healing.</p>
 </li>
 <li>
-<p><code>/get upkeep-per-faction [faction-name]</code><br>
-Prints out only the amount of 1 specified faction has to pay for their armies, monthly</p>
-</li>
-<li>
-<p><code>/get unpaid-armies-or-companies</code><br>
+<p><code>/info unpaid-armies-or-companies</code><br>
 Prints out the <strong>10 oldest</strong> armies or companies that have no registered payment yet.</p>
 </li>
 </ul>
@@ -697,9 +693,13 @@ Staff can delete these armies whenever they feel like it! If you notice that one
 <div class="ulist">
 <ul>
 <li>
-<p><code>/stockpile info</code><br>
+<p><code>/info faction stockpile</code><br>
 Displays the amount of food stockpiled by the specified faction<br>
 Food is counted in stacks!</p>
+</li>
+<li>
+<p><code>/info faction upkeep [faction-name]</code>
+Prints out only the amount of 1 specified faction has to pay for their armies, monthly</p>
 </li>
 </ul>
 </div>
@@ -742,20 +742,24 @@ All Claimbuild-Commands are <strong>staff-commands</strong>
 <div class="ulist">
 <ul>
 <li>
-<p><code>/update ign</code><br>
+<p><code>/update player ign</code><br>
 changes the ign of a player</p>
 </li>
 <li>
-<p><code>/update faction</code><br>
+<p><code>/update player faction</code><br>
 changes the faction of a player</p>
 </li>
 <li>
-<p><code>/update discordId</code><br>
+<p><code>/update player discord-id</code><br>
 changes discordId of a player</p>
 </li>
 <li>
 <p><code>/delete player</code><br>
 deletes a player from the database,</p>
+</li>
+<li>
+<p><code>/update claimmap</code><br>
+Sets the flag which indicates if the region has changed ownership since the last Claimmap update to false. Should be used after all the regions have been painted in the Claimmap. Resets the <strong>claimmap update</strong> sheet in the roleplay data sheet.</p>
 </li>
 </ul>
 </div>
@@ -769,19 +773,19 @@ deletes a player from the database,</p>
 creates an rpchar and appends it to the corresponding player</p>
 </li>
 <li>
-<p><code>/update rpchar-name</code><br>
+<p><code>/update rpchar name</code><br>
 changes the roleplay character&#8217;s name</p>
 </li>
 <li>
-<p><code>/update rpchar-title</code><br>
+<p><code>/update rpchar title</code><br>
 changes the title of the rpchar</p>
 </li>
 <li>
-<p><code>/update rpchar-pvp</code><br>
+<p><code>/update rpchar pvp</code><br>
 changes the pvp boolean of the rpchar</p>
 </li>
 <li>
-<p><code>/update rpchar-gear</code> <br>
+<p><code>/update rpchar gear</code> <br>
 changes the stated gear of the rpchar</p>
 </li>
 <li>
@@ -796,12 +800,16 @@ deletes a character and unbinds it from any armies</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>/delete army-or-company</code><br>
+<p><code>/delete army-or-company [army-or-company-name]</code><br>
 Force-deletes an army or company without checks for faction leader permissions, etc.</p>
 </li>
 <li>
 <p><code>/update paid</code><br>
 Updates if an army is paid for or not.</p>
+</li>
+<li>
+<p><code>/update army free-tokens [army-name] [free-tokens]</code><br>
+Sets how many <strong>free</strong> tokens an army has. The value cannot be above 30 (maximum token amount)!</p>
 </li>
 </ul>
 </div>
@@ -811,7 +819,7 @@ Updates if an army is paid for or not.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>/update faction-leader</code><br>
+<p><code>/update faction leader</code><br>
 Sets the faction leader of the specified faction to the specified player, removes the previous leader of that faction from his position</p>
 </li>
 <li>
@@ -878,11 +886,11 @@ Please refer to the <a href="../../guide/starters-guide.html">starter guide</a> 
 <div class="ulist">
 <ul>
 <li>
-<p><code>/update claimbuild-faction</code><br>
+<p><code>/update claimbuild faction</code><br>
 updates the controlling faction of a claimbuild &#8594; won&#8217;t be used until 1.1 <strong>War Update</strong></p>
 </li>
 <li>
-<p><code>/update claimbuild</code><br>
+<p><code>/update claimbuild values</code><br>
 updates a claimbuild, happens when players re-apply a claimbuild so that they can upgrade their production sites</p>
 </li>
 <li>
